@@ -90,7 +90,7 @@ def time_stats(df):
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
     common_month = df['month'].mode()[0]
-    print('The most common month of travel: ', common_month)
+    print('The most common month of travel: {}.'.format(common_month))
     
  
 
@@ -99,17 +99,17 @@ def time_stats(df):
     # TO DO: display the most common day of week
     df['day_of_week'] = df['Start Time'].dt.day_name()
     common_day_of_week = df['day_of_week'].mode()[0]
-    print('The most common day of week of travel: ',common_day_of_week)
+    print('The most common day of week of travel: {}.'.format(common_day_of_week))
 
 
     # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     common_hour = df['hour'].mode()[0]
-    print('The most common hour of travel: ',common_hour)
+    print('The most common hour of travel: {}.'.format(common_hour))
 
 
     new_var = time.time() - start_time
-    print("\nThis took %s seconds." %round((new_var),3))
+    print("\nThis took {} seconds.".format(round((new_var),3)))
     print('-'*40)
 
 
@@ -135,7 +135,7 @@ def station_stats(df):
 
 
     new_var = time.time() - start_time
-    print("\nThis took %s seconds." % round((new_var),3))
+    print("\nThis took {} seconds.".format(round((new_var),3)))
     print('-'*40)
 
 import datetime
@@ -169,14 +169,14 @@ def user_stats(df):
 
     # TO DO: Display counts of user types
     count_user_types = df['User Type'].value_counts()
-    print('Number of users by type:{}/n',count_user_types)
+    print('Number of users by type:{}/n'.format(count_user_types))
 
     birth_year=int()
 
     # TO DO: Display counts of gender
     try:
         count_gender = df['Gender'].value_counts()
-        print('Count of gender: ', count_gender)
+        print('Count of gender: {}.'.format(count_gender))
     except KeyError:
         print('No data available for the selected city')
     
@@ -187,13 +187,13 @@ def user_stats(df):
     try:
         earliest_birth_year = df['Birth Year'].min()
         earliest_year = int(earliest_birth_year)
-        print('The earliest birth by year: ', earliest_year)
+        print('The earliest birth by year: {}.'.format(earliest_year))
         most_recent_year = df['Birth Year'].max()
         recent_year = int(most_recent_year)
-        print('The most recent birth by year: ', recent_year)
+        print('The most recent birth by year: {}.'.format(recent_year))
         most_common_birth = df['Birth Year'].mode()[0]
         common_birth = int(most_common_birth)
-        print('The most common birth by year: ', common_birth)
+        print('The most common birth by year: {}.'.format(common_birth))
     except KeyError:
         print('Not available data')
 
