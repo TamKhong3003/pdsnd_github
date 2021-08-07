@@ -203,8 +203,8 @@ def display_data(df):
 
     print('\nDisplay data...\n')
     a = 0
-    b = 5
-    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no \n')
+    b = 6
+    view_data = input('\nWould you like to view 6 rows of individual trip data? Enter yes or no \n')
     start_loc = 0
     while True:
         if view_data.lower() == 'no':
@@ -212,7 +212,7 @@ def display_data(df):
         else:
             pd.set_option('display.max_columns',200)
             print(df.iloc[a:b])
-            start_loc += 5
+            start_loc += 6
             view_display = input('Do you wish to continue?:').lower()
             if view_display.lower() != 'yes':
                  break
