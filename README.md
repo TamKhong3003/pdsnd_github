@@ -9,6 +9,7 @@ Replace the Project Title
 Bike share system data
 ### Description
 Describe what your project is about and what it does
+The project explores the bike share system between three cities in USA: Chicago, New York City, and Washington by time.
 
 ### Files used
 Include the files used
