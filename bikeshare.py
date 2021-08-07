@@ -108,7 +108,8 @@ def time_stats(df):
     print('The most common hour of travel: ',common_hour)
 
 
-    print("\nThis took %s seconds." %round((time.time() - start_time),3))
+    new_var = time.time() - start_time
+    print("\nThis took %s seconds." %round((new_var),3))
     print('-'*40)
 
 
@@ -133,7 +134,8 @@ def station_stats(df):
     print(common_combination)
 
 
-    print("\nThis took %s seconds." % round((time.time() - start_time),3))
+    new_var = time.time() - start_time
+    print("\nThis took %s seconds." % round((new_var),3))
     print('-'*40)
 
 import datetime
@@ -154,7 +156,8 @@ def trip_duration_stats(df):
 
 
 
-    print("\nThis took %s seconds." % round((time.time() - start_time),3))
+    new_var = time.time() - start_time
+    print("\nThis took %s seconds." % round((new_var),3))
     print('-'*40)
 
 
@@ -195,7 +198,8 @@ def user_stats(df):
         print('Not available data')
 
 
-    print("\nThis took %s seconds." % round((time.time() - start_time),3))
+    new_var = time.time() - start_time
+    print("\nThis took %s seconds." % round((new_var),3))
     print('-'*40)
 
 def display_data(df):
